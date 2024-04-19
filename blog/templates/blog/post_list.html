@@ -1,4 +1,12 @@
-<html>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-	<h1>My first page</h1>
-</html>
+{% for post in posts %}
+    <div>
+        <p> publicado: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
